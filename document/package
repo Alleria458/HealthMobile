@@ -1,2 +1,6 @@
 
 npm i react-native-router-flux --save
+
+npm install --save react-redux
+
+npm install --save redux
