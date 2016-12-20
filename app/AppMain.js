@@ -13,12 +13,13 @@
 import React, {Component} from 'react';
 
 import LoginContainer from './containers/LoginContainer';
+import LoginRouter from './navigation/LoginRouter';
 import './locale/I18n';
 
 class AppMain extends Component {
     render() {
         return (
-            <LoginContainer/>
+            <LoginRouter/>
         )
     }
 }

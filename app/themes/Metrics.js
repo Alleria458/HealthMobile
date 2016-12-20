@@ -19,6 +19,7 @@ const metrics = {
     screenWidth: width < height ? width : height,
     screenHeight: width < height ? height : width,
     navBarHeight: (Platform.OS === 'ios') ? 64 : 54,
+    tabBarHeight: (Platform.OS === 'ios') ? 49 : 40,
 
     marginHorizontal: 10,
     marginVertical: 10,

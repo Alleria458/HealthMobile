@@ -17,7 +17,7 @@ export default StyleSheet.create({
 
     container: {
         paddingTop: 70,
-        backgroundColor: Colors.backgroundGray
+        backgroundColor: Colors.flatLightBlue
     },
 
     form: {
