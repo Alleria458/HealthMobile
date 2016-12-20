@@ -13,6 +13,7 @@
 import React, {Component} from 'react';
 
 import LoginContainer from './containers/LoginContainer';
+import './locale/I18n';
 
 class AppMain extends Component {
     render() {

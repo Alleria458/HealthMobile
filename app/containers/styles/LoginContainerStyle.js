@@ -17,7 +17,18 @@ export default StyleSheet.create({
 
     container: {
         paddingTop: 70,
-        backgroundColor: Colors.silver
+        backgroundColor: Colors.backgroundGray
+    },
+
+    form: {
+        backgroundColor: Colors.backgroundWhite,
+        margin: Metrics.baseMargin,
+        borderRadius: 4
+    },
+
+    row: {
+        paddingVertical: Metrics.doubleBaseMargin,
+        paddingHorizontal: Metrics.doubleBaseMargin
     },
 
     textInput: {

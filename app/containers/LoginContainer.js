@@ -11,10 +11,11 @@
  * Copyright (c) 2016 zhangtao. All rights reserved.
  */
 import React, {Component} from 'react';
-import { View, ScrollView, Image } from 'react-native';
+import {View, ScrollView, Image, Text} from 'react-native';
+import I18n from 'react-native-i18n';
 
 import styles from './styles/LoginContainerStyle';
-import { Images, Metrics } from '../themes';
+import {Images, Metrics} from '../themes';
 
 class LoginContainer extends Component {
 
@@ -38,7 +39,10 @@ class LoginContainer extends Component {
         return (
             <ScrollView contentContainerStyle={{justifyContent: 'center'}}
                         style={[styles.container, {height: this.state.visibleHeight}]}>
-                <View>
+                <View style={styles.form}>
+                    <View style={styles.row}>
+                        <Text>{I18n.t('username')}</Text>
+                    </View>
                 </View>
             </ScrollView>
         )
