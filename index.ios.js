@@ -4,13 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import { AppRegistry } from 'react-native';
 
 export default class HealthMobile extends Component {
   render() {
