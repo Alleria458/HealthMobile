@@ -15,4 +15,18 @@ import { Fonts, Metrics, Colors } from '../../themes'
 
 export default StyleSheet.create({
 
+    container: {
+        paddingTop: 70,
+        backgroundColor: Colors.silver
+    },
+
+    textInput: {
+        height: 40,
+        color: Colors.coal
+    },
+    textInputReadonly: {
+        height: 40,
+        color: Colors.steel
+    },
+
 })

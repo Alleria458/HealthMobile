@@ -11,7 +11,7 @@
  * Copyright (c) 2016 zhangtao. All rights reserved.
  */
 const images = {
-    homePage: require('../images/123.png')
+    // homePage: require('../images/123.png')
 };
 
 export default images;

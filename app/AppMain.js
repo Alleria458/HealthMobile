@@ -12,10 +12,12 @@
  */
 import React, {Component} from 'react';
 
+import LoginContainer from './containers/LoginContainer';
+
 class AppMain extends Component {
     render() {
         return (
-            {}
+            <LoginContainer/>
         )
     }
 }
