@@ -1,47 +1,17 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * HealthMobile React Native App
+ *
+ * index.ios.js
+ * Version 1.0.0
+ *
+ * (\_/)
+ * (O.o)    Zhang.Tao
+ * (> <)    2016-12-20
+ *
+ * Copyright (c) 2016 zhangtao. All rights reserved.
  */
 
 import { AppRegistry } from 'react-native';
+import AppMain from './app/AppMain';
 
-export default class HealthMobile extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
-
-AppRegistry.registerComponent('HealthMobile', () => HealthMobile);
+AppRegistry.registerComponent('HealthMobile', () => AppMain);
