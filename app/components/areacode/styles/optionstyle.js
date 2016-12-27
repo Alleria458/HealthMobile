@@ -1,7 +1,7 @@
 /**
  * HealthMobile React Native App
  *
- * RootContainer.js
+ * optionstyle.js
  * Version 1.0.0
  *
  * (\_/)
@@ -10,3 +10,10 @@
  *
  * Copyright (c) 2016 zhangtao. All rights reserved.
  */
+import {StyleSheet} from 'react-native'
+
+export default StyleSheet.create({
+    container: {
+        padding: 10
+    }
+})
