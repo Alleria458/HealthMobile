@@ -11,8 +11,8 @@
  * Copyright (c) 2016 zhangtao. All rights reserved.
  */
 import Option from './option';
-// import OptionList from './optionList';
+import OptionList from './optionList';
 import Listbox from './listbox';
 // import UpdatePosition from './updatePosition';
 
-export {Option, Listbox}
+export {Option, OptionList, Listbox}

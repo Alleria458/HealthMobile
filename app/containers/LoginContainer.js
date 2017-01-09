@@ -18,7 +18,7 @@ import styles from './styles/LoginContainerStyle';
 import {Images, Metrics} from '../themes';
 
 // import {Select, Option, OptionList, UpdatePosition} from '../components/areacode';
-import {Listbox, Option} from '../components/dropdownlistbox';
+import {Listbox, Option, OptionList} from '../components/dropdownlistbox';
 
 class LoginContainer extends Component {
 
@@ -39,16 +39,16 @@ class LoginContainer extends Component {
     //     UpdatePosition(this.refs['OPTIONLIST']);
     // }
     //
-    // _getOptionList() {
-    //     return this.refs['OPTIONLIST']
-    // }
-    //
-    // _canada(province){
-    //     this.setState({
-    //         ...this.state,
-    //         canada:province
-    //     })
-    // }
+    _getOptionList() {
+        return this.refs['OPTIONLIST']
+    }
+
+    _canada(province){
+        this.setState({
+            ...this.state,
+            canada:province
+        })
+    }
 
 
 
@@ -66,10 +66,9 @@ class LoginContainer extends Component {
                     <View style={styles.row}>
 
                         <Listbox width={200} defaultValue="+86"
-                                ref="LISTBOX" >
-                                {/*/!*optionListRef={this._getOptionList.bind(this)}*!/*/}
-                                {/*/!*onSelect={this._canada.bind(this)}>*!/*/}
-
+                                 ref="LISTBOX"
+                                 optionListRef={this._getOptionList.bind(this)}
+                                 onSelect={this._canada.bind(this)}>
 
                             <Option>+80</Option>
                             <Option>+81</Option>
@@ -79,6 +78,8 @@ class LoginContainer extends Component {
                             <Option>+85</Option>
                             <Option>+86</Option>
                         </Listbox>
+
+                        <OptionList ref="OPTIONLIST"/>
                     </View>
                 </View>
             </ScrollView>

@@ -46,6 +46,16 @@ class Listbox extends Component {
         if (!children.length) {
             return false;
         }
+
+        optionListRef()._show(children, this.pageX, this.pageY,
+            width, height, (item, value = item) => {
+                if (item) {
+                    onSelect(value);
+                    this.setState({
+                        value: item
+                    });
+                }
+            });
     }
 
 
