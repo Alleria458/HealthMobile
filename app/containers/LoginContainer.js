@@ -17,7 +17,8 @@ import I18n from 'react-native-i18n';
 import styles from './styles/LoginContainerStyle';
 import {Images, Metrics} from '../themes';
 
-import {Select, Option, OptionList, UpdatePosition} from '../components/areacode';
+// import {Select, Option, OptionList, UpdatePosition} from '../components/areacode';
+import {Listbox, Option} from '../components/dropdownlistbox';
 
 class LoginContainer extends Component {
 
@@ -31,23 +32,23 @@ class LoginContainer extends Component {
             language: '',
         }
     }
-
-    componentDidMount(){
-        UpdatePosition(this.refs['SELECT1']);
-        UpdatePosition(this.refs['SELECT2']);
-        UpdatePosition(this.refs['OPTIONLIST']);
-    }
-
-    _getOptionList() {
-        return this.refs['OPTIONLIST']
-    }
-
-    _canada(province){
-        this.setState({
-            ...this.state,
-            canada:province
-        })
-    }
+    //
+    // componentDidMount(){
+    //     UpdatePosition(this.refs['SELECT1']);
+    //     UpdatePosition(this.refs['SELECT2']);
+    //     UpdatePosition(this.refs['OPTIONLIST']);
+    // }
+    //
+    // _getOptionList() {
+    //     return this.refs['OPTIONLIST']
+    // }
+    //
+    // _canada(province){
+    //     this.setState({
+    //         ...this.state,
+    //         canada:province
+    //     })
+    // }
 
 
 
@@ -64,10 +65,11 @@ class LoginContainer extends Component {
                 <View style={styles.form}>
                     <View style={styles.row}>
 
-                        <Select width={250} defaultValue="+86"
-                                ref="SELECT1"
-                                optionListRef={this._getOptionList.bind(this)}
-                                onSelect={this._canada.bind(this)}>
+                        <Listbox width={200} defaultValue="+86"
+                                ref="LISTBOX" >
+                                {/*/!*optionListRef={this._getOptionList.bind(this)}*!/*/}
+                                {/*/!*onSelect={this._canada.bind(this)}>*!/*/}
+
 
                             <Option>+80</Option>
                             <Option>+81</Option>
@@ -76,7 +78,7 @@ class LoginContainer extends Component {
                             <Option>+84</Option>
                             <Option>+85</Option>
                             <Option>+86</Option>
-                        </Select>
+                        </Listbox>
                     </View>
                 </View>
             </ScrollView>
