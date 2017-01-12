@@ -17,8 +17,13 @@ import I18n from 'react-native-i18n';
 import styles from './styles/LoginContainerStyle';
 import {Images, Metrics} from '../themes';
 
+import Dropdownlistbox from '../components/areaphone/dropdownlistbox';
+import ComboBox from '../components/areaphone/combobox';
+
 // import {Select, Option, OptionList, UpdatePosition} from '../components/areacode';
-import {Listbox, Option, OptionList} from '../components/dropdownlistbox';
+// import {Listbox, Option, OptionList, GetPosition} from '../components/dropdownlistbox';
+
+// import Dropdownlistbox from './components/areaphone/dropdownlistbox';
 
 class LoginContainer extends Component {
 
@@ -32,13 +37,13 @@ class LoginContainer extends Component {
             language: '',
         }
     }
-    //
+
     // componentDidMount(){
-    //     UpdatePosition(this.refs['SELECT1']);
-    //     UpdatePosition(this.refs['SELECT2']);
-    //     UpdatePosition(this.refs['OPTIONLIST']);
+    //     GetPosition(this.refs['LISTBOX']);
+    //     // UpdatePosition(this.refs['SELECT2']);
+    //     GetPosition(this.refs['OPTIONLIST']);
     // }
-    //
+
     _getOptionList() {
         return this.refs['OPTIONLIST']
     }
@@ -63,25 +68,28 @@ class LoginContainer extends Component {
             <ScrollView contentContainerStyle={{justifyContent: 'center'}}
                         style={[styles.container, {height: this.state.visibleHeight}]}>
                 <View style={styles.form}>
-                    <View style={styles.row}>
+                    <ComboBox/>
+                    {/*<Dropdownlistbox />*/}
+                    {/*<View style={styles.row}>*/}
 
-                        <Listbox width={200} defaultValue="+86"
-                                 ref="LISTBOX"
-                                 optionListRef={this._getOptionList.bind(this)}
-                                 onSelect={this._canada.bind(this)}>
+                        {/*<Listbox width={80} defaultValue="+86"*/}
+                                 {/*ref="LISTBOX"*/}
+                                 {/*optionListRef={this._getOptionList.bind(this)}*/}
+                                 {/*onSelect={this._canada.bind(this)}>*/}
 
-                            <Option>+80</Option>
-                            <Option>+81</Option>
-                            <Option>+82</Option>
-                            <Option>+83</Option>
-                            <Option>+84</Option>
-                            <Option>+85</Option>
-                            <Option>+86</Option>
-                        </Listbox>
+                            {/*<Option>+80</Option>*/}
+                            {/*<Option>+81</Option>*/}
+                            {/*<Option>+82</Option>*/}
+                            {/*<Option>+83</Option>*/}
+                            {/*<Option>+84</Option>*/}
+                            {/*<Option>+85</Option>*/}
+                            {/*<Option>+86</Option>*/}
+                        {/*</Listbox>*/}
+                        {/*<OptionList ref="OPTIONLIST"/>*/}
 
-                        <OptionList ref="OPTIONLIST"/>
-                    </View>
+                    {/*</View>*/}
                 </View>
+
             </ScrollView>
         )
     }

@@ -13,6 +13,6 @@
 import Option from './option';
 import OptionList from './optionList';
 import Listbox from './listbox';
-// import UpdatePosition from './updatePosition';
+import GetPosition from './getPosition';
 
-export {Option, OptionList, Listbox}
+export {Option, OptionList, Listbox, GetPosition}

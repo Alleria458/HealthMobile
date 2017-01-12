@@ -18,8 +18,15 @@ export default StyleSheet.create({
     listbox:{
         borderColor: '#BDBDC1',
         borderWidth: 2 / window.scale,
-        borderRadius: 10
+        // borderRadius: 10
+        flexDirection: 'row',
+        alignItems: 'center'
     },
+
+    // listbox:{
+    //     flexDirection: 'row',
+    //     alignItems: 'center'
+    // },
 
     option:{
         padding:10
@@ -28,6 +35,7 @@ export default StyleSheet.create({
     overlay:{
         position: 'absolute',
         backgroundColor: 'transparent',
+        // backgroundColor: rgba(0,0,0,.5),
         width: window.width,
         height:window.height
     },

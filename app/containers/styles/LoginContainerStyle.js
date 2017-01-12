@@ -22,7 +22,8 @@ export default StyleSheet.create({
 
     form: {
         backgroundColor: Colors.backgroundWhite,
-        margin: Metrics.baseMargin,
+        margin: 40,
+
         borderRadius: 4
     },
 

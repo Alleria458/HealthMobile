@@ -30,7 +30,8 @@ class OptionList extends Component {
             positionY: 0,
             items: [],
             onSelect: () => {
-            }
+            },
+            onOverlay:() => {}
         }
     }
 
@@ -58,7 +59,7 @@ class OptionList extends Component {
      * @param onSelect
      * @private
      */
-    _show(items, positionX, positionY, width, height, onSelect){
+    _show(items, positionX, positionY, width, height, onSelect, onOverlay){
         positionX = positionX - this.state.pageX;
         positionY = positionY - this.state.pageY;
 
@@ -70,6 +71,7 @@ class OptionList extends Component {
             height,
             items,
             onSelect,
+            onOverlay,
             show: true
         })
     }
@@ -79,8 +81,9 @@ class OptionList extends Component {
      * @private
      */
     _onOverlayPress() {
-        const {onSelect} = this.state;
+        const {onSelect, onOverlay} = this.state;
         onSelect(null, null);
+        onOverlay();
 
         this.setState({
             ...this.state,
